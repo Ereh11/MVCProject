@@ -1,0 +1,18 @@
+﻿@model Book;
+
+@{
+    var currentBook = Model;
+}
+
+@if (currentBook.Price > 100)
+{
+    <h2>Expensive Book</h2>
+}
+else
+{
+    <h3>Cheap Book</h3>
+}
+
+<p>Name: @currentBook.Name</p>
+<p>Price: @currentBook.Price</p>
+<p>Author: @currentBook.Author</p>

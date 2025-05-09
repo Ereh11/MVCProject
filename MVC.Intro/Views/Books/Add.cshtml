@@ -1,0 +1,22 @@
+﻿@model AddBookDto;
+
+
+@* form to be submitted to books/add*@
+
+<form asp-action="Add" method="post">
+
+    <input asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <input asp-for="Email" />
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

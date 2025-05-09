@@ -1,0 +1,10 @@
+﻿@model List<Book>;
+
+<p> @(Model.Count > 10 ? "Big List" : "Small List") </p>
+
+@foreach (var book in Model)
+{
+    <p>Id: @book.Id</p>
+    <p>Name: @book.Name</p>
+    <p>Price: @book.Price</p>
+}
